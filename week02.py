@@ -1,10 +1,14 @@
-drinks = ["Ice Americano","Cafe Latte"]
-prices = [2000,3000]
+drinks = ["Ice Americano","Cafe Latte","watermelon juice"]
+prices = [2000,3000,4900]
 amounts = [0,0]
 total_price = 0
-#order_list = ''
+
+menu_lists = ""
+for k in range(len(drinks)):
+    menu_lists += f"{k+1}) {drinks[k]} {prices[k]}won "
+menu_lists = menu_lists + f"{len(drinks)+1})Exit "
 while True:
-    menu = input(f"1) {drinks[0]} {prices[0]}won 2) {drinks[1]} {prices[1]}won  3) Exit")
+    menu = input(menu_lists)
     if menu =="1":
         print(f"{drinks[0]}  ordered. price is {prices[0]}")
         total_price+=prices[0]
@@ -22,6 +26,8 @@ while True:
         print(f"{menu} menu is not exist. ")
 
 #print(order_list)
-print(f"{drinks[0]} {prices[0]} {amounts[0]} {prices[0] * amounts[0]}")
-print(f"{drinks[1]} {prices[1]} {amounts[1]} {prices[1] * amounts[1]}")
+for i in range(len(drinks)):
+    if amounts[i]>0:
+        print(f"{drinks[i]} {prices[i]} {amounts[i]} {prices[i] * amounts[i]}")
+
 print(f"total price is {total_price}")
