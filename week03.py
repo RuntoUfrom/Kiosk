@@ -1,6 +1,8 @@
 drinks = ["Ice Americano","Cafe Latte","watermelon juice"]
 prices = [2000,3000,4800]
-amounts = [0,0,0]
+amounts = list()
+for _n in range(len(drinks)):
+    amounts.append(0)
 total_price = 0
 
 def order_process(idx : int):
