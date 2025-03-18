@@ -2,7 +2,8 @@ drinks = ["Ice Americano","Cafe Latte","watermelon juice"]
 prices = [2000,3000,4800]
 amounts = [0,0,0]
 total_price = 0
-
+"""this code
+is for introduce everything for what to do every one Hello My name is """
 def order_process(idx : int):
     global total_price
     print(f"{drinks[idx]}  ordered. price is {prices[idx]}")
@@ -14,6 +15,8 @@ def order_process(idx : int):
     #menu_lists += f"{k+1}) {drinks[k]} {prices[k]}won "
 menu_lists = " ".join([f"{k+1}) {drinks[k]} {prices[k]} won " for k in range(len(drinks))])
 menu_lists = menu_lists + f"{len(drinks)+1})Exit "
+
+
 
 while True:
     menu = int(input(menu_lists))
